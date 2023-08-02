@@ -14,19 +14,18 @@ function Login() {
 
     const login = () => {
         const data = { username: username, password: password };
-        axios.post("http://localhost:3001/auth/login", data).then((response) => {
-            if (response.data.error) {
-                alert(response.data.error);
-            } else {
-                localStorage.setItem("accessToken", response.data.token);
-                setAuthState({
-                    username: response.data.username,
-                    id: response.data.id,
-                    status: true,
-                });
-                navigate("/");
-            }
-        });
+        try {
+            axios.post("https://kalikablog.onrender.com/auth/login/", data)
+                .then((res) => {
+                    localStorage.setItem("token", res.data.token)
+                    navigate('/');
+                }).catch(error => {
+                    console.log(error)
+                })
+        } catch (error) {
+
+            console.log(error)
+        }
     };
 
     return (

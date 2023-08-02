@@ -1,6 +1,7 @@
 import { GoComment } from 'react-icons/go'
 import { TbHeartPlus } from 'react-icons/tb'
 import { Link } from 'react-router-dom'
+import user from '../../assets/user.png'
 import { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import { AuthContext } from '../../helpers/AuthContext'
@@ -15,8 +16,8 @@ const Posts = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:3001/posts");
-                setBlogs(response.data);
+                const response = await axios.get("https://kalikablog.onrender.com/blog");
+                setBlogs(response.data.data);
             } catch (error) {
                 console.log(error);
             }
@@ -61,8 +62,12 @@ const Posts = () => {
                                 <div key={i} className='bg-white rounded-md shadow-md mb-6 mt-4'>
                                     <div>
                                         <Link to={`/postById/${val.id}`}>
-                                            <div className='w-full'>
-                                                <img src={`http://localhost:3001/${val.image}`} alt="" className='w-full h-40 md:h-[300px] rounded-t-md' />
+                                            <div className='w-full h-40 md:h-[300px] rounded-t-md'
+                                                style={{
+                                                    backgroundImage: `url(${val.image[0].path})`,
+                                                    backgroundSize: "cover",
+                                                    backgroundPosition: "center"
+                                                }}>
                                             </div>
                                         </Link>
 
@@ -70,7 +75,7 @@ const Posts = () => {
                                             <div className='flex'>
                                                 <Link to={`/postById/${val.id}`}>
                                                     <div className='grid place-items-center text-2xl text-white font-semibold h-10 w-10 rounded-full m-1 p-1 capitalize bg-purple-600'>
-                                                        {val.username.charAt(0)}
+                                                        <img src={user} alt="" />
                                                     </div>
                                                 </Link>
                                                 <div className='grid items-center py-2 capitalize'>
@@ -99,7 +104,7 @@ const Posts = () => {
                                                             <span>
                                                                 <TbHeartPlus />
                                                             </span>
-                                                            <span>{val.Likes.length}</span>
+                                                            <span>5</span>
                                                         </div>
                                                     </div>
                                                 </Link>

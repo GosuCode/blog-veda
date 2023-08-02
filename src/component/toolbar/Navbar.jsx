@@ -8,7 +8,7 @@ import User from './User'
 
 const Navbar = () => {
     const [show, setShow] = useState(false);
-    const { authState, setSearch } = useContext(AuthContext)
+    const { setSearch } = useContext(AuthContext)
 
     return (
         <>
@@ -28,23 +28,20 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                {!authState.status ? (
-                    <>
-                        <div className='flex items-center'>
-                            <Link to={'/login'} className='border border-blue-500 rounded-md mr-2 grid items-center px-[15px] h-10 font-bold text-blue-600 hover:bg-blue-600 hover:text-white'>Login</Link>
-                            <Link to={'/register'} className='border border-blue-500 rounded-md mr-2 grid items-center px-[15px] h-10 font-bold text-blue-600 hover:bg-blue-600 hover:text-white'>Register</Link>
-                        </div>
-                    </>
-                ) : (
-                    <div className="flex items-center">
-                        <div>
-                            Welcome <strong className='uppercase'>{authState.username} </strong>!
-                        </div>
-                        <div className='h-12 cursor-pointer grid items-center' onClick={() => setShow(!show)}>
-                            <img src={user} alt="user-profile" className='h-full absolute rounded-full m-1 p-2' />
-                        </div>
+                <>
+                    <div className='flex items-center'>
+                        <Link to={'/login'} className='border border-blue-500 rounded-md mr-2 grid items-center px-[15px] h-10 font-bold text-blue-600 hover:bg-blue-600 hover:text-white'>Login</Link>
+                        <Link to={'/register'} className='border border-blue-500 rounded-md mr-2 grid items-center px-[15px] h-10 font-bold text-blue-600 hover:bg-blue-600 hover:text-white'>Register</Link>
                     </div>
-                )}
+                </>
+                <div className="flex items-center">
+                    <div>
+                        Welcome <strong className='uppercase'>User !</strong>!
+                    </div>
+                    <div className='h-12 cursor-pointer grid items-center' onClick={() => setShow(!show)}>
+                        <img src={user} alt="user-profile" className='h-full absolute rounded-full m-1 p-2' />
+                    </div>
+                </div>
             </nav>
             {show && <User />}
         </>
