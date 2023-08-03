@@ -3,7 +3,7 @@ import SingleMain from "./SingleMain"
 
 const SinglePost = () => {
     return (
-        <div className="grid grid-cols-11 md:px-28">
+        <div className="md:px-28 pt-20 px-5">
             {/* Post here */}
             <SingleMain />
             {/* Profile here */}

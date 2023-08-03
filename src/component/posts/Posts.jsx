@@ -39,8 +39,12 @@ const Posts = () => {
 
     // Sort the posts based on the id property
     const sortedPosts = [...blogs].sort((a, b) => {
+        // Convert the createdAt timestamps to Date objects using moment
+        const dateA = moment(a.createdAt).toDate();
+        const dateB = moment(b.createdAt).toDate();
+
         // Use the latestFirst state to determine the sorting order
-        return latestFirst ? b.id - a.id : a.id - b.id;
+        return latestFirst ? dateA - dateB : dateB - dateA;
     });
 
     return (
@@ -85,7 +89,7 @@ const Posts = () => {
                                             </div>
 
                                             <div className='lg:pl-10'>
-                                                <Link to={`/postById/${val.id}`}>
+                                                <Link to={`/postById/${val._id}`}>
                                                     <div>
                                                         <h1 className='font-bold text-lg lg:text-3xl'>
                                                             {val.title}

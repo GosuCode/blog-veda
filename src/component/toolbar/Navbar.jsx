@@ -12,7 +12,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='flex fixed justify-between border-b border-slate-400 w-full md:px-28 bg-white'>
+            <nav className='flex fixed justify-between border-b border-slate-400 w-full px-4 md:px-28 bg-white'>
                 <div className="flex gap-2">
                     <Link to={'/'} className='flex items-center'>
                         <img src={logo} alt="" className='h-14 rounded-full m-1 p-1' />
@@ -28,15 +28,9 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <>
-                    <div className='flex items-center'>
-                        <Link to={'/login'} className='border border-blue-500 rounded-md mr-2 grid items-center px-[15px] h-10 font-bold text-blue-600 hover:bg-blue-600 hover:text-white'>Login</Link>
-                        <Link to={'/register'} className='border border-blue-500 rounded-md mr-2 grid items-center px-[15px] h-10 font-bold text-blue-600 hover:bg-blue-600 hover:text-white'>Register</Link>
-                    </div>
-                </>
                 <div className="flex items-center">
                     <div>
-                        Welcome <strong className='uppercase'>User !</strong>!
+                        Welcome <strong className='uppercase'>User </strong>!
                     </div>
                     <div className='h-12 cursor-pointer grid items-center' onClick={() => setShow(!show)}>
                         <img src={user} alt="user-profile" className='h-full absolute rounded-full m-1 p-2' />

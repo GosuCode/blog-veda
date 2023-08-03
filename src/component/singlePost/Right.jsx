@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import user from '../../assets/user.jpg'
+import user from '../../assets/user.png'
 
 const Right = () => {
     return (
