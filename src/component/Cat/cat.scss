@@ -16,6 +16,7 @@ $size: 170px; // (Fully responsive)
 	height: 60%;
 	width: 25%;
 	background: $color-white;
+	border: 2px solid $color-black;
 
 	// Ear hair
 	&::before,
@@ -223,10 +224,10 @@ $size: 170px; // (Fully responsive)
 }
 
 /* General page styling */
-html {
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: $color-black;
-}
+// html {
+// 	height: 100%;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	background: $color-black;
+// }
