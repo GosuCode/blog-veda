@@ -20,6 +20,7 @@ const Posts = () => {
             try {
                 const response = await axios.get("https://kalikablog.onrender.com/blog");
                 setBlogs(response.data.data);
+                console.log(response.data.data);
                 setLoading(false);
             } catch (error) {
                 console.log(error);
@@ -52,11 +53,10 @@ const Posts = () => {
 
     return (
         <>
-            <div className='flex text-xl hover:cursor-pointer pt-14'>
-                <div className='hover:font-semibold py-2 px-3' onClick={handleSortClick}>
+            <div className='text-xl hover:cursor-pointer pt-14'>
+                <div className='font-semibold py-2 px-3' onClick={handleSortClick}>
                     {latestFirst ? 'Oldest' : 'Latest'}
                 </div>
-                <div className='hover:font-semibold py-2 px-3'>Top</div>
             </div>
             <div>
                 {!loading ?
@@ -83,12 +83,12 @@ const Posts = () => {
                                                 <div className='px-5 md:py-5 mb-2'>
                                                     <div className='flex'>
                                                         <Link to={`/postById/${val.id}`}>
-                                                            <div className='grid place-items-center text-2xl text-white font-semibold h-10 w-10 rounded-full m-1 p-1 capitalize bg-purple-600'>
-                                                                <img src={user} alt="" />
+                                                            <div className='grid place-items-center text-2xl text-white font-semibold h-10 w-10 rounded-full m-1 bg-purple-600'>
+                                                                <img src={user} alt="user profile" className='rounded-full h-10 w-10' />
                                                             </div>
                                                         </Link>
                                                         <div className='grid items-center py-2 capitalize'>
-                                                            <div className='text-sm font-semibold'>{val.username}</div>
+                                                            <div className='text-sm font-semibold'>{val.author_name}</div>
                                                             <span className='text-xs'>{formatCreatedAt(val.createdAt)}</span>
                                                         </div>
                                                     </div>

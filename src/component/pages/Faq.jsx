@@ -4,7 +4,7 @@ const Faq = () => {
     return (
         <>
             <div className="w-full h-full">
-                <div className="pt-28 mx-32">
+                <div className="pt-20 pb-10 mx-32">
                     <div className="bg-white rounded-sm pt-10 px-20 shadow-md shadow-gray-400 text-xl pb-6">
                         <h1 className="text-4xl font-bold">Frequently Asked Questions 🤔</h1>
                         <em>Some of these are not actually asked frequently, but they&apos;re still good to know.</em><br /><br />

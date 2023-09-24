@@ -36,15 +36,15 @@ const SingleMain = () => {
                             <button className="grid mt-8 justify-items-center w-12 h-12 items-center hover:bg-slate-200 rounded-full">
                                 <TbHeartPlus className="text-2xl hover:text-rose-500" />
                             </button>
-                            <div className="grid mt-8 justify-items-center w-12 h-12 items-center hover:bg-slate-200 rounded-full">
+                            <button className="grid mt-8 justify-items-center w-12 h-12 items-center hover:bg-slate-200 rounded-full">
                                 <GoComment className="text-2xl hover:text-blue-500" />
-                            </div>
-                            <div className="grid mt-8 justify-items-center w-12 h-12 items-center hover:bg-slate-200 rounded-full">
+                            </button>
+                            <button className="grid mt-8 justify-items-center w-12 h-12 items-center hover:bg-slate-200 rounded-full">
                                 <BsBookmark className="text-2xl hover:text-yellow-400" />
-                            </div>
-                            <div className="grid mt-8 justify-items-center w-12 h-12 items-center hover:bg-slate-200 rounded-full">
+                            </button>
+                            <button className="grid mt-8 justify-items-center w-12 h-12 items-center hover:bg-slate-200 rounded-full">
                                 <FiMoreHorizontal className="text-2xl hover:text-slate-500" />
-                            </div>
+                            </button>
                         </div>
                         <div className="col-start-3 col-span-9 bg-white shadow-sm shadow-slate-400 pb-10">
                             <div className='w-full rounded-t-md'>

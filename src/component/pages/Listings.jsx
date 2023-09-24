@@ -2,7 +2,7 @@ import Cat from '../Cat/Cat'
 const Listings = () => {
     return (
         <div className="bg-white md:mt-16 fixed px-4 mx-10 border-gray-200 border rounded-md p-4">
-            <div className="flex justify-between">
+            <div className="flex justify-between font-semibold">
                 <div>
                     Listing
                 </div>
@@ -11,7 +11,8 @@ const Listings = () => {
                 </div>
             </div>
             <div className="mt-2">
-                List of paid advertisements on job or any other things. Need to pay for the ads while creating it.
+                Loading will take some time. About 1 minute lol. <br />
+                <strong>I&apos;ll be changing API soon.</strong>
             </div>
             <div className='w-full h-[500px] grid place-items-center'>
                 <Cat />
