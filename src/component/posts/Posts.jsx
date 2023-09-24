@@ -53,7 +53,7 @@ const Posts = () => {
     return (
         <>
             <div className='text-xl hover:cursor-pointer pt-14'>
-                <div className='font-semibold py-2 px-3' onClick={handleSortClick}>
+                <div className='font-semibold pt-6 py-2 px-3' onClick={handleSortClick}>
                     {latestFirst ? 'Oldest' : 'Latest'}
                 </div>
             </div>

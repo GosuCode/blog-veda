@@ -5,7 +5,7 @@ const Notice = () => {
         <>
             <div className="bg-white md:mt-16 fixed px-4 mx-10 border-gray-200 border rounded-md pt-24">
                 <div className="mt-2">
-                    This is just the copy of original original project. <strong>My original project use MYSQL, so I can&apos;t upload it here.</strong>
+                    This is just the copy of original project. <strong>My original project use MYSQL, so I can&apos;t upload it here.</strong>
                     To access the project follow this link. <br />
                     <a href="https://github.com/GosuCode/WIRE." className='underline text-blue-500'>https://github.com/GosuCode/WIRE.</a> <br />
                     Loading will take some time. About 1 minute lol. <br />
