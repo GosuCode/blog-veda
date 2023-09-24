@@ -13,6 +13,7 @@ import ReadingList from './component/pages/ReadingList';
 import Faq from './component/pages/Faq';
 import Contact from './component/pages/Contact';
 import About from './component/pages/About';
+import Notice from './component/pages/Notice';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route exact path='/postById/:id' element={<SinglePost />} />
             <Route exact path='/login' element={<Login />} />
             <Route exact path='/readingList' element={<ReadingList />} />
+            <Route exact path='/notice' element={<Notice />} />
             <Route exact path='/register' element={<Register />} />
             <Route exact path='/contact' element={<Contact />} />
             <Route exact path='/faq' element={<Faq />} />

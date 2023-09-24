@@ -20,7 +20,6 @@ const Posts = () => {
             try {
                 const response = await axios.get("https://kalikablog.onrender.com/blog");
                 setBlogs(response.data.data);
-                console.log(response.data.data);
                 setLoading(false);
             } catch (error) {
                 console.log(error);

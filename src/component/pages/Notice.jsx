@@ -1,16 +1,9 @@
 import Cat from '../Cat/Cat'
-const Listings = () => {
+import Sidebar from '../toolbar/Sidebar'
+const Notice = () => {
     return (
         <>
-            <div className="bg-white md:mt-16 fixed px-4 mx-10 border-gray-200 border rounded-md p-4">
-                <div className="flex justify-between font-semibold">
-                    <div>
-                        Listing
-                    </div>
-                    <div>
-                        See all
-                    </div>
-                </div>
+            <div className="bg-white md:mt-16 fixed px-4 mx-10 border-gray-200 border rounded-md pt-24">
                 <div className="mt-2">
                     This is just the copy of original original project. <strong>My original project use MYSQL, so I can&apos;t upload it here.</strong>
                     To access the project follow this link. <br />
@@ -22,8 +15,11 @@ const Listings = () => {
                     <Cat />
                 </div>
             </div>
+            <div className='md:hidden'>
+                <Sidebar />
+            </div>
         </>
     )
 }
 
-export default Listings
+export default Notice

@@ -1,5 +1,5 @@
 import { FaLightbulb } from 'react-icons/fa';
-import { FcAbout, FcContacts, FcHome, FcReading, FcList } from 'react-icons/fc';
+import { FcAbout, FcContacts, FcHome, FcList } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -11,14 +11,9 @@ const Sidebar = () => {
             path: '/',
         },
         {
-            name: 'Reading List',
-            icon: <FcReading />,
-            path: '/readingList',
-        },
-        {
             name: 'Listings',
             icon: <FcList />,
-            path: '/',
+            path: '/notice',
         },
         {
             name: 'FAQ',
@@ -37,7 +32,7 @@ const Sidebar = () => {
         },
     ]
     return (
-        <div className='px-2 fixed md:top-16 bottom-0 bg-white w-full md:w-0 md:bg-transparent md:flex-col flex h-[8%] md:h-auto justify-around md:justify-normal'>
+        <div className='px-2 fixed z-30 md:top-16 bottom-0 bg-white w-full md:w-0 md:bg-transparent md:flex-col flex h-[8%] md:h-auto justify-around md:justify-normal'>
             {sidebarData.map((val, key) => {
                 return (
                     <Link to={val.path} key={key} className='group flex mt-5 lg:w-60 h-10 md:hover:bg-indigo-100 rounded-md active:bg-white'>
